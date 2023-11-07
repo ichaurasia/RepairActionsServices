@@ -17,7 +17,6 @@ public class RepairActionsServicesController {
      * This is here for development purposes and making sure environment is setup and responding
      *
      * @return "ping" with an HTTP-200
-     * @throws Exception
      */
     @GetMapping("/health_check")
     public ResponseEntity<String> getHealthStatus(@RequestParam Optional<String> throwError) throws Exception {
