@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.5</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>com.progrexion.repairactionsservices</groupId>
+    <artifactId>RepairActionsServices</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>RepairActionsServices</name>
+    <description>Spring Boot RepairActionsServices</description>
+
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>vwsl-mvnrepo-libs-snapshot</id>
+            <name>vwsl-mvnrepo.pgx.local-snapshot</name>
+            <url>http://vwsl-mvnrepo.pgx.local:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+        <repository>
+            <id>vwsl-mvnrepo-libs-release</id>
+            <name>vwsl-mvnrepo.pgx.local-release</name>
+            <url>http://vwsl-mvnrepo.pgx.local:8081/artifactory/libs-release-local</url>
+        </repository>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>repairactionsservices-common</module>
+        <module>repairactionsservices-dataaccess</module>
+        <module>repairactionsservices-models</module>
+        <module>repairactionsservices-services</module>
+        <module>repairactionsservices-web</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
